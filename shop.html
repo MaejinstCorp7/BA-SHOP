@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/e-Shop--Styles.css">
+
+    <!-- box icons link -->
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remix icons link -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google fonts link -->
+   
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!--Animated O Scroll -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="1450" data-aos-delay="0">
+
+    <!-- Header -->
+
+    <header>
+        <a href="index.html" class="Logo"><img src="img/logo5.png"></a>
+
+        <ul class="navlist">
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a class="active" href="shop.html">Shop</a></li>
+        </ul>
+
+    </header>
+    
+    <!-- articles -->
+
+    <section id="Articles" class="n-product">
+        <div class="n-content aos-init" data-aos="zoom-out">
+            <div class="row">
+                <h3>Basique</h3>
+                <div class="row-img">
+                    <img src="img/Basique:Basic 15e.jpeg" alt="Image" class="thumbnail" onclick="openLightbox('img/Basique:Basic 15e.jpeg')">
+                </div>
+                
+                <div class="row-in">
+                    <div class="row-right">
+                        <h4>15€</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h3>MIX</h3>
+                <div class="row-img">
+                    <img src="img/Mix 20e.jpeg" alt="Image" class="thumbnail" onclick="openLightbox('img/Mix 20e.jpeg')">
+                </div>
+
+                <div class="row-in">
+                    <div class="row-right">
+                        <h4>20€</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h3>TWINS</h3>
+                <div class="row-img">
+                    <img src="img/TWINS 17e.jpeg" alt="Image" class="thumbnail" onclick="openLightbox('img/TWINS 17e.jpeg')">
+                </div>
+
+                <div class="row-in">
+                    <div class="row-right">
+                        <h4>17€</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="n-content aos-init" data-aos="zoom-out">
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/BASIC.png" alt="Image" class="thumbnail" onclick="openLightbox('img/BASIC.jpeg')">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/MIX.png" alt="Image" class="thumbnail" onclick="openLightbox('img/MIX.jpeg')">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-img">
+                    <img src="img/TWINS.png" alt="Image" class="thumbnail" onclick="openLightbox('img/TWINS.jpeg')">
+                </div>
+            </div>
+        </div>  
+        
+        <div id="lightbox">
+            <img src="" id="lightbox-img" alt="Image Agrandie">
+        </div>
+
+    </section>
+<!--Styles light box -->
+    <title>Lightbox d'Image</title>
+    <style>
+        .thumbnail {
+            width: 150px;
+            cursor: pointer;
+        }
+
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        #lightbox:target {
+            display: flex;
+        }
+    </style>
+
+
+    <!-- Order button -->
+    <!--Styles order button -->
+    <title>Bouton Commande</title>
+    <style>
+        .commande-btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .commande-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <div class="n-content"><button class="commande-btn" onclick="sendOrderEmail()">Commander</button></div>
+
+    <!-- Newsletter -->
+
+    
+
+    <!-- Footer -->
+
+    <!-- Copyright -->
+
+    <div class="copyright">
+        <div class="end-text">
+            <p>Copyright 2024 By Maejinst Corp.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script>
+        function sendOrderEmail() {
+            var email = "mae7corp@gmail.com";
+            var subject = "Commande de mèche";
+            var body = "Bonjour,\n\nJe souhaite passer une commande pour les produits suivants :\n\n- BASIC (15€) : 1\n- MIX (20€) : 1\n- TWINS (17€) : 1\n\nMerci de me confirmer la disponibilité, le prix et la livraison.\n\nCordialement,\n[Votre Nom - Prénom]";
+
+            var mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+
+    <script>
+        function openLightbox(imageSrc) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imageSrc;
+            lightbox.style.display = 'flex';
+        }
+
+        document.getElementById('lightbox').onclick = function() {
+            this.style.display = 'none';
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- custom js link -->
+    
+    <script src="js/script.js"></script>
+    
+    <!--Animated O Scroll -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 300,
+        duration: 1450,
+    });
+    </script>
+</body>
+</html>
