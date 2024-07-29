@@ -556,6 +556,7 @@ select{
     border-radius: 10px;
     margin-right: 14px;
     transform: transform 0.6s;
+    display: none;
 }
 
 .social a:hover{
